@@ -37,7 +37,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .nav-logo{display:flex;align-items:center;gap:10px}
 .nav-logo img{height:36px;width:36px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(0,212,255,0.4))}
 .nav-sep{width:1px;height:28px;background:rgba(255,255,255,0.12);margin:0 4px}
-.nav-logo .hg-logo{border-radius:50%;background:var(--dark2);padding:2px;box-sizing:border-box;filter:drop-shadow(0 0 8px rgba(245,166,35,0.35));mix-blend-mode:normal}
+.nav-logo .hg-logo{filter:drop-shadow(0 0 8px rgba(245,166,35,0.4))}
 .nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;background:linear-gradient(90deg,var(--cyan),var(--violet2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--cyan),var(--violet));color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;padding:10px 20px;border-radius:100px;text-decoration:none;transition:opacity .2s,transform .2s}
 .nav-cta:hover{opacity:.85;transform:translateY(-1px)}
@@ -56,8 +56,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .hero-logo-x{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;color:rgba(255,255,255,0.2)}
 .hero-logo-wrap{position:relative;display:inline-block}
 .hero-logo-wrap img{height:80px;width:80px;object-fit:contain;filter:drop-shadow(0 0 20px rgba(0,212,255,.5)) drop-shadow(0 0 40px rgba(123,92,245,.3))}
-.hero-logo-hg{background:var(--dark2);border-radius:50%;overflow:hidden}
-.hero-logo-hg img{transform:scale(1.18);mix-blend-mode:normal;filter:none}
+.hero-logo-hg svg{filter:drop-shadow(0 0 20px rgba(245,166,35,.5)) drop-shadow(0 0 40px rgba(245,166,35,.2))}
 .hero-logo-ring{position:absolute;inset:-8px;border-radius:50%;border:1px solid rgba(0,212,255,.2);animation:spin 8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
@@ -179,7 +178,28 @@ h1{animation-delay:.32s}
   <div class="nav-logo">
     <img src="logo-endam.png" alt="Endam Digital">
     <span class="nav-sep"></span>
-    <img src="logo-honeygain.png" alt="Honeygain" class="hg-logo">
+    <svg class="hg-logo" width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="58" cy="55" rx="26" ry="22" fill="#F5A623" stroke="#1a1008" stroke-width="4"/>
+      <ellipse cx="58" cy="55" rx="8" ry="8" fill="#1a1008"/>
+      <ellipse cx="58" cy="55" rx="4" ry="4" fill="#F5A623"/>
+      <path d="M32 40 Q20 30 25 18 Q38 22 40 38Z" fill="url(#wing1)" opacity="0.85"/>
+      <path d="M36 52 Q22 48 24 36 Q37 36 42 50Z" fill="url(#wing2)" opacity="0.75"/>
+      <line x1="48" y1="34" x2="38" y2="22" stroke="#1a1008" stroke-width="3" stroke-linecap="round"/>
+      <line x1="54" y1="32" x2="48" y2="20" stroke="#1a1008" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="38" cy="21" r="4" fill="#E8445A"/>
+      <circle cx="48" cy="19" r="4" fill="#E8445A"/>
+      <path d="M46 62 L38 72 L42 68 L36 78" stroke="#1a1008" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <defs>
+        <linearGradient id="wing1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#c084fc"/>
+          <stop offset="100%" stop-color="#ec4899"/>
+        </linearGradient>
+        <linearGradient id="wing2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#7c3aed"/>
+          <stop offset="100%" stop-color="#c084fc"/>
+        </linearGradient>
+      </defs>
+    </svg>
     <span class="nav-brand">Endam Digital × Honeygain</span>
   </div>
   <a href="https://join.honeygain.com/CEDRID6FE9" target="_blank" rel="noopener" class="nav-cta">
@@ -206,7 +226,28 @@ h1{animation-delay:.32s}
     </div>
     <div class="hero-logo-x">×</div>
     <div class="hero-logo-wrap hero-logo-hg">
-      <img src="logo-honeygain.png" alt="Honeygain">
+      <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="58" cy="55" rx="26" ry="22" fill="#F5A623" stroke="#1a1008" stroke-width="4"/>
+        <ellipse cx="58" cy="55" rx="8" ry="8" fill="#1a1008"/>
+        <ellipse cx="58" cy="55" rx="4" ry="4" fill="#F5A623"/>
+        <path d="M32 40 Q20 30 25 18 Q38 22 40 38Z" fill="url(#hwing1)" opacity="0.9"/>
+        <path d="M36 52 Q22 48 24 36 Q37 36 42 50Z" fill="url(#hwing2)" opacity="0.8"/>
+        <line x1="48" y1="34" x2="38" y2="22" stroke="#1a1008" stroke-width="3" stroke-linecap="round"/>
+        <line x1="54" y1="32" x2="48" y2="20" stroke="#1a1008" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="38" cy="21" r="4" fill="#E8445A"/>
+        <circle cx="48" cy="19" r="4" fill="#E8445A"/>
+        <path d="M46 62 L38 72 L42 68 L36 78" stroke="#1a1008" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="hwing1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc"/>
+            <stop offset="100%" stop-color="#ec4899"/>
+          </linearGradient>
+          <linearGradient id="hwing2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7c3aed"/>
+            <stop offset="100%" stop-color="#c084fc"/>
+          </linearGradient>
+        </defs>
+      </svg>
       <div class="hero-logo-ring" style="border-color:rgba(245,166,35,.25);animation-direction:reverse"></div>
     </div>
   </div>
